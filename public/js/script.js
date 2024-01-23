@@ -10,10 +10,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const scoreBoard = document.querySelector('#score');
     const startButton = document.querySelector('#startButton');
     const timerDisplay = document.querySelector('#timeLeft');
+    let level = document.querySelector('#level');
 
     //variables globales
 
-    let level = document.querySelector('#level');
+
     let score = 0;
     let currentTime = 30;
     let timerId = null;
@@ -62,13 +63,15 @@ document.addEventListener('DOMContentLoaded', () => {
         moleTimerId = setInterval(randomSquare, t);
     }
 
+    //dernière animation avant msg gameover
+
     function lastMoveMole() {
 
         lastMoleTimerId = setInterval(randomSquare, 50);
     }
 
 
-    //liostener sur le grid avec calcul score ( en + si classe mole touchée, en - si click ailleurs)
+    //listener sur le grid avec calcul score ( en + si classe mole touchée, en - si click ailleurs)
 
     grid.addEventListener('click', e => {
 
