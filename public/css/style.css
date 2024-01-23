@@ -1,0 +1,90 @@
+body {
+    background-color: lightgrey;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+#mainFrame {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#startButton {
+    padding: 10px;
+    font-size: 2.5em;
+    color: antiquewhite;
+    margin: 5px;
+    background-color: darkred;
+    box-shadow: 10px 5px 5px #460707;
+    border-radius: 5px;
+}
+
+#scoreBoard {
+
+    padding: 5px;
+    font-size: 2em;
+    color: antiquewhite;
+    background-color: indianred;
+    box-shadow: 10px 5px 5px #460707;
+    border-radius: 5px;
+
+}
+
+#starter {
+
+
+}
+
+
+#timeLeft, #level {
+    font-weight: bold;
+    padding: 20px;
+    font-size: 1.5em;
+    color: antiquewhite;
+    background-color: indianred;
+    box-shadow: 10px 5px 5px #460707;
+    border-radius: 5px;
+
+}
+
+
+#gameboard {
+    width: 400px;
+    margin: auto;
+}
+
+#grid {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+.square {
+
+    border-radius: 12% 88% 12% 88% / 89% 12% 88% 11%;
+    width: 150px;
+    height: 150px;
+    background-color: cadetblue;
+    border: 2px solid #999;
+    position: relative;
+    box-shadow: 10px 5px 5px darkslategray;
+}
+
+.mole {
+    background-image: url('./mole.png');
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.mole:hover {
+    transition: transform 200ms;
+    transform: rotate(360deg);
+    background-size: 110%;
+}
